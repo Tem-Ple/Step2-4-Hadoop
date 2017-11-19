@@ -1,0 +1,13 @@
+---
+- hosts: all
+
+  tasks:
+   - name: "push hosts"
+     copy: src=hadoop_conf/{{ item }} dest=/usr/local/hadoop/etc/hadoop/{{ item }} force=yes
+     with_items:
+        - core-site.xml
+        - hadoop-env.sh
+        - hdfs-site.xml
+        - mapred-site.xml
+        - yarn-site.xml
+        - slaves
