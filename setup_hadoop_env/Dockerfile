@@ -33,9 +33,9 @@ EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
 
 # 添加JDK
-ADD jdk7u79linuxx64.tar.gz /usr/local/
-RUN mv /usr/local/jdk1.7.0_79 /usr/local/jdk1.7
-ENV JAVA_HOME /usr/local/jdk1.7
+ADD jdk-8u151-linux-x64.tar.gz /usr/local/
+RUN mv /usr/local/jdk1.8.0_151 /usr/local/jdk1.8
+ENV JAVA_HOME /usr/local/jdk1.8
 ENV PATH $JAVA_HOME/bin:$PATH
 
 # 添加Hadoop
