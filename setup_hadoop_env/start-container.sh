@@ -6,3 +6,5 @@ docker start hadoop2
 
 cd ansible
 ansible-playbook push_hosts.yml
+
+docker exec -it hadoop0 /usr/local/hadoop/sbin/start-all.sh
