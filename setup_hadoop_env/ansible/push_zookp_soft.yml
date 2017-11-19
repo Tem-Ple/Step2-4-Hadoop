@@ -1,0 +1,13 @@
+---
+- hosts: datanode
+
+  tasks:
+   - name: "push tar"
+     copy: src=zookeeper-3.4.10.tar.gz dest=/root/
+   - name: "install tar"
+     command: yum install -y tar
+   - name: "untar"
+     command: tar zxvf /root/zookeeper-3.4.10.tar.gz -C /usr/local
+   - name: "move"
+     command: mv /usr/local/zookeeper-3.4.10 /usr/local/zookeeper
+

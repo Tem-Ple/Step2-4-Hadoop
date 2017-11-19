@@ -1,0 +1,10 @@
+---
+- hosts: datanode
+
+  tasks:
+   - name: "push zoo.cfg"
+     copy: src=zkp_conf/zoo.cfg dest=/usr/local/zookeeper/conf/
+   - name: "mkdir dataDir"
+     command: mkdir -p /usr/local/zookeeper/tmp
+   - name: "touch myid"
+     shell: echo ${HOSTNAME:0-1} > /usr/local/zookeeper/tmp/myid
