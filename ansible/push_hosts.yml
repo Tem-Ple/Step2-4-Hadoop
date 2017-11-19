@@ -1,0 +1,8 @@
+---
+- hosts: all
+
+  tasks:
+   - name: "push hosts"
+     copy: src=./hosts dest=/root/hosts
+   - name: "overwrite hosts"
+     command: cp /root/hosts /etc/hosts
