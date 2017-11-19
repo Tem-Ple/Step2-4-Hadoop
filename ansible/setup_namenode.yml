@@ -1,6 +1,0 @@
----
-- hosts: namenode
-
-  tasks:
-   - name: "set env"
-     command: date
