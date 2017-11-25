@@ -12,4 +12,5 @@ export PATH
 
 export JAVA_HOME=/usr/local/jdk1.8
 export HADOOP_HOME=/usr/local/hadoop
-export PATH=$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
+export ZOOKEEPER_HOME=/usr/local/zookeeper
+export PATH=$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$ZOOKEEPER_HOME/bin:$PATH
